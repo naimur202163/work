@@ -1,0 +1,15 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-isutra-dev-95757-authRole",
+      "UnauthRoleArn": "arn:aws:iam::725264340226:role/amplify-isutra-dev-95757-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::725264340226:role/amplify-isutra-dev-95757-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-isutra-dev-95757-deployment",
+      "UnauthRoleName": "amplify-isutra-dev-95757-unauthRole",
+      "StackName": "amplify-isutra-dev-95757",
+      "StackId": "arn:aws:cloudformation:us-east-1:725264340226:stack/amplify-isutra-dev-95757/a5447db0-d597-11ec-90cd-12d3e691f57b",
+      "AmplifyAppId": "d14llgf1tqt7hh"
+    }
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "name": "isutra-backend",
+  "version": "1.0.0",
+  "description": "isutra backend using Express + Sequelize",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "dev": "nodemon server",
+    "migrate": "npx sequelize-cli db:migrate",
+    "unmigrate": "npx sequelize-cli db:migrate:undo:all",
+    "dbseed": "npx sequelize-cli db:seed:all",
+    "undoseed": "npx sequelize-cli db:seed:undo:all",
+    "refreshdb": "npm run unmigrate && npm run migrate && npm run dbseed",
+    "heroku-postbuild": "cd backend && npm install --only=dev && npm install && npm run build",
+    "docker:build": "docker build -t isutra-backend . ",
+    "docker:run": "docker run -d -it -p 5000:5000 isutra-backend"
+  },
+  "author": "Will Hicks",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.1126.0",
+    "@animated-burgers/burger-squeeze": "^1.1.2",
+    "@aws-sdk/client-ivs": "^3.67.0",
+    "@sendgrid/mail": "^7.4.0",
+    "@stripe/react-stripe-js": "^1.2.2",
+    "@stripe/stripe-js": "^1.12.1",
+    "bcryptjs": "^2.4.3",
+    "cloudinary": "^1.23.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "multer": "^1.4.4",
+    "multer-s3": "^2.10.0",
+    "node-cache": "^5.1.2",
+    "nodemailer": "^6.5.0",
+    "nodemailer-html-to-text": "^3.2.0",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "pg": "^8.2.1",
+    "pg-hstore": "^2.3.3",
+    "request": "^2.88.2",
+    "sequelize": "^6.2.3",
+    "socket.io": "^4.5.1",
+    "stripe": "^8.135.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.12",
+    "sequelize-cli": "^6.2.0"
+  }
+}

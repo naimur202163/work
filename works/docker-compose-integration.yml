@@ -1,0 +1,30 @@
+version: "3.8"
+services:
+  backend:
+    image: "isutra-int-backend"
+    #image: 725264340226.dkr.ecr.us-east-2.amazonaws.com/isutra-integration-backend
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile
+    volumes:
+      - /app/node_modules
+      - ./backend:/app
+    env_file:
+      - ./backend/.env
+    ports:
+      - "5000:5000"
+  frontend:
+    image: "isutra-int-frontend"
+    #image: 725264340226.dkr.ecr.us-east-2.amazonaws.com/isutra-integration-frontend
+    build:
+      context: ./frontend
+      dockerfile: ./Dockerfile
+    volumes:
+      - /app/node_modules
+      - ./frontend:/app
+    env_file:
+      - ./frontend/.env
+    ports:
+      - "3000:3000"
+    # stdin_open: true # docker run -i
+    # tty: true # docker run -t

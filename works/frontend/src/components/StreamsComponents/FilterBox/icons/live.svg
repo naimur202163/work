@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="42.156" height="28.104" viewBox="0 0 42.156 28.104">
+  <g id="Live_icon" data-name="Live icon" transform="translate(0)">
+    <g id="Group_65" data-name="Group 65" transform="translate(-310.922 -304.448)">
+      <text id="LIVE" transform="translate(319 322)" fill="#f2f2f7" font-size="10" font-family="Montserrat-ExtraBold, Montserrat" font-weight="800" letter-spacing="0.1em"><tspan x="0" y="0">LIVE</tspan></text>
+      <g id="rectangle" transform="translate(310.922 304.448)">
+        <path id="Path_73" data-name="Path 73" d="M127.385,354.464a2,2,0,0,1,2,2v18.1a2,2,0,0,1-2,2H95.229a2,2,0,0,1-2-2v-18.1a2,2,0,0,1,2-2h32.156m0-3H95.229a5,5,0,0,0-5,5v18.1a5,5,0,0,0,5,5h32.156a5,5,0,0,0,5-5v-18.1a5,5,0,0,0-5-5Z" transform="translate(-90.229 -351.464)" fill="#f2f2f7"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,62 @@
+version: "3"
+
+services:
+  backend:
+    env_file: "./backend/.env"
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile.dev
+    image: "thearpeggio/isutra-backend"
+    ports:
+      - "5000:5000"
+  frontend:
+    env_file: "./frontend/.env"
+    build:
+      context: ./frontend
+      dockerfile: ./Dockerfile.dev
+    image: "thearpeggio/isutra-frontend"
+    ports:
+      - "3000:3000"
+    stdin_open: true # docker run -i
+    tty: true # docker run -t
+    # links:
+    #   - "backend:be"
+# version: "3"
+# services:
+#   frontend:
+#     build:
+#       context: ./frontend
+#       dockerfile: Dockerfile.dev
+#     volumes:
+#       - /app/node_modules
+#       - ./frontend:/app
+#     ports:
+#       - "3000:3000"
+#     restart: on-failure
+#     container_name: isutra-frontend-dev
+#   backend:
+#     build:
+#       context: ./backend
+#       dockerfile: Dockerfile.dev
+#     ports:
+#       - "5000:5000"
+#     restart: on-failure
+#     container_name: isutra-backend-dev
+#     volumes:
+#       - /app/node_modules # Inside the container, don't try to override this folder, just leave as is
+#       - ./backend:/app # Look at the server directory and copy everything into the app folder in the container
+#     environment:
+#       - JWT_SECRET=!Sutr@JWT1979%#!
+#       - JWT_EXPIRE=30d
+#       - DATABASE_URL=postgres://mfiiquvd:ifMp7_dwSLS2mdIgnMvgY2-4puqIPm7Q@ziggy.db.elephantsql.com/mfiiquvd
+#       - CLOUDINARY_API_KEY=227636988235292
+#       - CLOUDINARY_API_SECRET=swBc7zVflUj2Yr_SSn9s2UkK38g
+#       - CLOUDINARY_CLOUD_NAME=dmseyfyof
+#       - BASE_URL=http://localhost:3000
+#       - STRIPE_SECRET_KEY=sk_test_GvsuLRTscISldesxtmdOXU4b00ytPGcc6Z
+#       - SUBSCRIPTION_PLAN_0=price_1IgiwZFrBwhwu8k5PrPCgzD6
+#       - SUBSCRIPTION_PLAN_5=price_1Igiy1FrBwhwu8k51yjbmsie
+#       - REACT_APP_BACKEND_URL=http://localhost:5000/api/v1/
+#       - REACT_APP_BASE_URL=http://localhost:3000/
+#       - REACT_APP_CLOUDINARY_ENDPOINT=https://api.cloudinary.com/v1_1/dmseyfyof
+#       - REACT_APP_CLOUDINARY_PRESET_NAME=isutra

@@ -1,0 +1,31 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-simplewebstreaming-dev-153138-authRole",
+      "UnauthRoleArn": "arn:aws:iam::725264340226:role/amplify-simplewebstreaming-dev-153138-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::725264340226:role/amplify-simplewebstreaming-dev-153138-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-simplewebstreaming-dev-153138-deployment",
+      "UnauthRoleName": "amplify-simplewebstreaming-dev-153138-unauthRole",
+      "StackName": "amplify-simplewebstreaming-dev-153138",
+      "StackId": "arn:aws:cloudformation:us-east-1:725264340226:stack/amplify-simplewebstreaming-dev-153138/deea7520-c547-11ec-bdd8-0e06c0e6c3d3",
+      "AmplifyAppId": "d15xrbtm0mk2wx",
+      "APIGatewayAuthURL": "https://s3.amazonaws.com/amplify-simplewebstreaming-dev-153138-deployment/amplify-cfn-templates/api/APIGatewayAuthStack.json"
+    },
+    "categories": {
+      "auth": {
+        "simplewebstreaming5fec9bae": {}
+      },
+      "function": {
+        "saveIVSparam": {
+          "deploymentBucketName": "amplify-simplewebstreaming-dev-153138-deployment",
+          "s3Key": "amplify-builds/saveIVSparam-3730466f4c4466516541-build.zip"
+        },
+        "ISSgetServers": {
+          "deploymentBucketName": "amplify-simplewebstreaming-dev-153138-deployment",
+          "s3Key": "amplify-builds/ISSgetServers-6c516d3265684f6a6935-build.zip"
+        }
+      }
+    }
+  }
+}
